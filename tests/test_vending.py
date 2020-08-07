@@ -36,7 +36,7 @@ class TestVendingMachine():
     # def test_catch_coin_invalid(self):
 
 
-class TestStock():
-    def test_check(self):
+# class TestStock():
+#     def test_check(self):
 
-        assert stock.check() == []
+#         assert stock.check() == []
