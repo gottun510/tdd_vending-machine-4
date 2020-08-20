@@ -1,4 +1,4 @@
-from functools import reduce
+# from functools import reduce
 
 
 class Coin(object):
@@ -11,8 +11,14 @@ class VendingMachine(object):
         self.contained = []
         self.available_coin_amounts = [10, 50, 100, 500, 1000]
 
-    def catch_coin(self, coin: Coin) -> Coin:
+    def check_coin(self, coin: Coin) -> bool:
         if coin.amount in self.available_coin_amounts:
+            return True
+        else:
+            return False
+    
+    def treatment_coin(self, coin:Coin) -> Coin:
+        if self.check_coin(coin) == True:
             self.contained.append(coin)
             return None
         else:
